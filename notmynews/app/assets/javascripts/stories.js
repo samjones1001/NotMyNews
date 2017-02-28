@@ -1,22 +1,21 @@
 $(document).ready(function(){
 
-	function getHeadline() {
-		var results = ''
-		var papers = ['buzzfeed', 'the-guardian-uk', 'the-huffington-post', 'the-new-york-times', 'mirror']
 
-		for (var i = 0; i < papers.length; i++) {
-			$.get("https://newsapi.org/v1/articles?source=" + papers[i] + "&apiKey=a6b03a1b52f64218a40f82bd352dd8f9", function(data){
-				for (var i = 0; i< 3; i++) {
-					results += (data.articles[i].title) + ' ';
-					console.log('hi!')
-				}
+  function ArticleNews(source) {
 
-			});
-			// $elem = document.getElementById('storylist')
 
-		}
+    var apiKey = '52fe927b3c4f4fe28bcf38d0b2e82875'
+    var url = 'https://newsapi.org/v1/articles?source=' + source + '&apiKey=' + apiKey
+    $.get(url , function(data) {
+
+      $('#storylist').append(data.articles[0].title )
+    })
+  }
+	var papers = ['buzzfeed', 'the-guardian-uk', 'the-huffington-post', 'the-new-york-times', 'mirror']
+	for (var i = 0; i < papers.length; i++){
+		ArticleNews(papers[i])
 
 	}
-	getHeadline()
 
-});
+
+})
