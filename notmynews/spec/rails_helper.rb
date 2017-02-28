@@ -9,6 +9,7 @@ require 'capybara/rails'
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 require 'support/database_cleaner'
+require_relative 'helpers/sessions_helper.rb'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
