@@ -1,2 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.container:nth-of-type(2) {
+	background: url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRI7WNv1Skod6irn5PwzVYtT4Wi5bX2hkLYk3HrBHxfVPp0lW4n5A) no-repeat;
+	background-size: 750px 280px
+}
+
+.jumbotron {
+	background-color: transparent !important;
+	color: white !important;
+
+}
+
+.jumbotron h1, .lead{
+	background-color: black;
+}
