@@ -1,0 +1,46 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    / The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %link{:href => "../../favicon.ico", :rel => "icon"}/
+    / Bootstrap core CSS
+    %link{:href => "/assets/css/bootstrap.min.css", :rel => "stylesheet"}/
+    / IE10 viewport hack for Surface/desktop Windows 8 bug
+    %link{:href => "/assets/css/ie10-viewport-bug-workaround.css", :rel => "stylesheet"}/
+    / Custom styles for this template
+    %link{:href => "/assets/css/jumbotron-narrow.css", :rel => "stylesheet"}/
+    / Just for debugging purposes. Don't actually copy these 2 lines!
+    /[if lt IE 9] <script src="../../assets/js/ie8-responsive-file-warning.js"></script>
+    %script{:src => "/assets/js/ie-emulation-modes-warning.js"}
+    / HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      <script src="/assets/js/html5shiv.min.js"></script>
+      <script src="/assets/js/respond.min.js"></script>
+
+  %body
+    .container
+      = alert
+      = notice
+      .header.clearfix
+        %nav
+          %ul.nav.nav-pills.pull-right
+            %li.active{:role => "presentation"}
+              %a{:href => "/"} Home
+            - if user_signed_in?
+              %li{:role => "presentation"}
+                =link_to "Sign out", destroy_user_session_path, method: :delete
+            - else
+              %li{:role => "presentation"}
+                =link_to "Sign in", new_user_session_path
+              %li{:role => "presentation"}
+                =link_to "Sign up", new_user_registration_path
+
+    / /container
+    / IE10 viewport hack for Surface/desktop Windows 8 bug
+    %script{:src => "/assets/js/ie10-viewport-bug-workaround.js"}
