@@ -1,9 +1,10 @@
-def sign_up(email: 'john@example.com', password: 'shoobydooby')
+def sign_up(email: 'john@example.com', password: 'shoobydooby', preference: 'Left')
   visit ('/')
   click_link 'Sign up'
   fill_in 'Email', with: email
   fill_in 'Password', with: password
   fill_in 'Password confirmation', with: password
+  select preference, from: "Preference"
   click_button 'Sign up'
 end
 
