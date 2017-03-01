@@ -1,0 +1,903 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "student" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "papers" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (7.5ms)[0m  [1m[34m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (16.1ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'notmynews_test'[0m
+  [1m[35m (28.2ms)[0m  [1m[35mTRUNCATE TABLE "public"."ar_internal_metadata", "public"."student", "public"."users", "public"."papers" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "student" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "papers" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:07:43 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (9.7ms)
+  Rendered layouts/_navigation.html.haml (28.5ms)
+Completed 200 OK in 32148ms (Views: 32110.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:15 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (28.7ms)
+  Rendered layouts/_navigation.html.haml (23.7ms)
+Completed 200 OK in 101ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:15 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (6.2ms)
+  Rendered layouts/_navigation.html.haml (23.5ms)
+Completed 200 OK in 48ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:15 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (7.2ms)
+  Rendered layouts/_navigation.html.haml (22.0ms)
+Completed 200 OK in 50ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:08:16 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (11.1ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (99.3ms)
+  Rendered layouts/_navigation.html.haml (29.3ms)
+Completed 200 OK in 233ms (Views: 168.9ms | ActiveRecord: 28.9ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:08:16 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (1.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (20.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$1Bf1kh73vBO6OEWAO.N3sug4ojWqcxbuczRxMXTUTZLx6s7GED5.C"], ["created_at", 2017-03-01 17:08:16 UTC], ["updated_at", 2017-03-01 17:08:16 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:08:16 UTC], ["last_sign_in_at", 2017-03-01 17:08:16 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:08:16 UTC], ["id", 1]]
+  [1m[35m (7.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 136ms (ActiveRecord: 33.3ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:16 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (8.1ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (20.8ms)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 1.3ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:16 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (13.3ms)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:16 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.haml (22.0ms)
+Completed 200 OK in 50ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:08:16 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (12.4ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (34.5ms)
+  Rendered layouts/_navigation.html.haml (27.9ms)
+Completed 200 OK in 133ms (Views: 124.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:08:16 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$CJheEpyx7T9cZkKkfjg3aegLEHknJ/gAPimsDkaC9HSM6X.SReRZi"], ["created_at", 2017-03-01 17:08:16 UTC], ["updated_at", 2017-03-01 17:08:16 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:08:16 UTC], ["last_sign_in_at", 2017-03-01 17:08:16 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:08:16 UTC], ["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 45ms (ActiveRecord: 3.4ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:16 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (9.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (13.9ms)
+Completed 200 OK in 58ms (Views: 46.6ms | ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:16 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (8.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (32.4ms)
+Completed 200 OK in 66ms (Views: 59.6ms | ActiveRecord: 0.8ms)
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:17 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (19.7ms)
+  Rendered layouts/_navigation.html.haml (32.7ms)
+Completed 200 OK in 140ms (Views: 137.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:08:17 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (16.4ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (53.3ms)
+  Rendered layouts/_navigation.html.haml (21.8ms)
+Completed 200 OK in 116ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:08:17 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$PCd/mypb9Z.xy5QvnZmzMudeI0LIiuqwPbi.4/u0cnIwKgrD77hf2"], ["created_at", 2017-03-01 17:08:17 UTC], ["updated_at", 2017-03-01 17:08:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:08:17 UTC], ["last_sign_in_at", 2017-03-01 17:08:17 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:08:17 UTC], ["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 39ms (ActiveRecord: 3.2ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:17 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (6.0ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (15.1ms)
+Completed 200 OK in 39ms (Views: 33.5ms | ActiveRecord: 1.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:17 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (4.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (15.8ms)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.8ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-03-01 17:08:17 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 56ms (ActiveRecord: 1.5ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:17 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.haml (22.3ms)
+Completed 200 OK in 81ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:17 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (14.0ms)
+  Rendered layouts/_navigation.html.haml (43.4ms)
+Completed 200 OK in 85ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in?class=sign-in" for 127.0.0.1 at 2017-03-01 17:08:17 +0000
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"class"=>"sign-in"}
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (7.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (42.6ms)
+  Rendered layouts/_navigation.html.haml (16.0ms)
+Completed 200 OK in 109ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-03-01 17:08:17 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", 2017-03-01 17:08:18 UTC], ["sign_in_count", 2], ["updated_at", 2017-03-01 17:08:18 UTC], ["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 112ms (ActiveRecord: 4.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:18 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (18.6ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (98.6ms)
+Completed 200 OK in 165ms (Views: 157.9ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:18 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.haml (21.8ms)
+Completed 200 OK in 81ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:08:18 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (15.6ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (71.0ms)
+  Rendered layouts/_navigation.html.haml (36.3ms)
+Completed 200 OK in 197ms (Views: 193.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:08:18 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (14.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$i1liVIA43fa9nZr9wV8VL.EVWMNq/elTyQU8ekPizgnUiz8bYRiM2"], ["created_at", 2017-03-01 17:08:18 UTC], ["updated_at", 2017-03-01 17:08:18 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:08:18 UTC], ["last_sign_in_at", 2017-03-01 17:08:18 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:08:18 UTC], ["id", 4]]
+  [1m[35m (49.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 464ms (ActiveRecord: 66.9ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:19 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (54.9ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (22.6ms)
+Completed 200 OK in 187ms (Views: 165.4ms | ActiveRecord: 1.5ms)
+Started GET "/users/edit" for 127.0.0.1 at 2017-03-01 17:08:19 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (173.6ms)
+  Rendered layouts/_navigation.html.haml (105.5ms)
+Completed 200 OK in 362ms (Views: 353.9ms | ActiveRecord: 0.6ms)
+Started PUT "/users" for 127.0.0.1 at 2017-03-01 17:08:19 +0000
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "preference"=>"right"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[33mUPDATE "users" SET "preference" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["preference", "right"], ["updated_at", 2017-03-01 17:08:19 UTC], ["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 119ms (ActiveRecord: 7.2ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:08:19 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (6.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (34.9ms)
+Completed 200 OK in 74ms (Views: 67.3ms | ActiveRecord: 0.5ms)
+Started GET "/users/edit" for 127.0.0.1 at 2017-03-01 17:08:20 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (32.8ms)
+  Rendered layouts/_navigation.html.haml (19.7ms)
+Completed 200 OK in 147ms (Views: 141.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "preference") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "a@test.com"], ["encrypted_password", "$2a$04$wWQsTz2Uemi1yCjZibNiG.2IAL4HdRghi/EdjRQFaBo64/WbJZASO"], ["created_at", 2017-03-01 17:08:20 UTC], ["updated_at", 2017-03-01 17:08:20 UTC], ["preference", "left"]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "student" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "papers" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.0ms)[0m  [1m[34m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'notmynews_test'[0m
+  [1m[35m (35.8ms)[0m  [1m[35mTRUNCATE TABLE "public"."ar_internal_metadata", "public"."student", "public"."users", "public"."papers" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "student" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "papers" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:50 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (45.5ms)
+  Rendered layouts/_navigation.html.haml (20.9ms)
+Completed 200 OK in 1528ms (Views: 1468.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:52 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (10.5ms)
+  Rendered layouts/_navigation.html.haml (61.0ms)
+Completed 200 OK in 122ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:52 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (14.3ms)
+  Rendered layouts/_navigation.html.haml (24.2ms)
+Completed 200 OK in 124ms (Views: 120.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:52 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (14.4ms)
+  Rendered layouts/_navigation.html.haml (157.6ms)
+Completed 200 OK in 205ms (Views: 200.1ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:11:53 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (7.6ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (253.6ms)
+  Rendered layouts/_navigation.html.haml (28.1ms)
+Completed 200 OK in 551ms (Views: 439.9ms | ActiveRecord: 19.9ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:11:53 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$Y4iJ3pbnuzXXbMxwVVJk1e56wqjuvl7.oSRTxgX8Xtj.AW3y4zlty"], ["created_at", 2017-03-01 17:11:53 UTC], ["updated_at", 2017-03-01 17:11:53 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:11:53 UTC], ["last_sign_in_at", 2017-03-01 17:11:53 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:11:53 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 115ms (ActiveRecord: 3.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:53 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (9.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (23.8ms)
+Completed 200 OK in 74ms (Views: 62.9ms | ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:53 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (8.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (19.9ms)
+Completed 200 OK in 50ms (Views: 41.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (5.0ms)
+  Rendered layouts/_navigation.html.haml (37.6ms)
+Completed 200 OK in 63ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.7ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (13.3ms)
+  Rendered layouts/_navigation.html.haml (13.4ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$Ck5JnSqYHw/mKBvTXbKTuOlW/.HYgC1zxtx2/ChFsXA9JPCvgJOLW"], ["created_at", 2017-03-01 17:11:54 UTC], ["updated_at", 2017-03-01 17:11:54 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (5.1ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:11:54 UTC], ["last_sign_in_at", 2017-03-01 17:11:54 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:11:54 UTC], ["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 76ms (ActiveRecord: 8.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (9.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (24.9ms)
+Completed 200 OK in 89ms (Views: 85.4ms | ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (6.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (27.4ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.haml (73.9ms)
+Completed 200 OK in 98ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (8.7ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (38.7ms)
+  Rendered layouts/_navigation.html.haml (26.3ms)
+Completed 200 OK in 116ms (Views: 113.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$fFkTnIVTmdgG/W/W2xoYm.QcDyw7jfBC9EL.awNgGezi1rP/.iq7y"], ["created_at", 2017-03-01 17:11:54 UTC], ["updated_at", 2017-03-01 17:11:54 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:11:54 UTC], ["last_sign_in_at", 2017-03-01 17:11:54 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:11:54 UTC], ["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 65ms (ActiveRecord: 5.9ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (13.2ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (28.3ms)
+Completed 200 OK in 70ms (Views: 63.1ms | ActiveRecord: 3.3ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (33.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (29.6ms)
+Completed 200 OK in 102ms (Views: 95.5ms | ActiveRecord: 0.6ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 15ms (ActiveRecord: 1.3ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (6.8ms)
+  Rendered layouts/_navigation.html.haml (12.6ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:55 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (13.9ms)
+  Rendered layouts/_navigation.html.haml (25.1ms)
+Completed 200 OK in 65ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in?class=sign-in" for 127.0.0.1 at 2017-03-01 17:11:55 +0000
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"class"=>"sign-in"}
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.3ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (20.7ms)
+  Rendered layouts/_navigation.html.haml (21.0ms)
+Completed 200 OK in 84ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-03-01 17:11:55 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", 2017-03-01 17:11:55 UTC], ["sign_in_count", 2], ["updated_at", 2017-03-01 17:11:55 UTC], ["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 83ms (ActiveRecord: 3.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:55 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (11.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (40.4ms)
+Completed 200 OK in 85ms (Views: 81.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:55 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (7.5ms)
+  Rendered layouts/_navigation.html.haml (15.5ms)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:11:55 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.3ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (21.5ms)
+  Rendered layouts/_navigation.html.haml (13.3ms)
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:11:55 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$JIJIsvsgCxN./o689ngyi.emyw9Z7KeVwnDLVKNjDyLyZQT8uLbui"], ["created_at", 2017-03-01 17:11:55 UTC], ["updated_at", 2017-03-01 17:11:55 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:11:55 UTC], ["last_sign_in_at", 2017-03-01 17:11:55 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:11:55 UTC], ["id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 29ms (ActiveRecord: 2.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:55 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (24.3ms)
+Completed 200 OK in 48ms (Views: 43.5ms | ActiveRecord: 0.5ms)
+Started GET "/users/edit" for 127.0.0.1 at 2017-03-01 17:11:55 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (25.8ms)
+  Rendered layouts/_navigation.html.haml (26.2ms)
+Completed 200 OK in 121ms (Views: 117.1ms | ActiveRecord: 0.4ms)
+Started PUT "/users" for 127.0.0.1 at 2017-03-01 17:11:55 +0000
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "preference"=>"right"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "preference" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["preference", "right"], ["updated_at", 2017-03-01 17:11:55 UTC], ["id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 47ms (ActiveRecord: 2.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:11:56 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (4.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (20.8ms)
+Completed 200 OK in 52ms (Views: 46.2ms | ActiveRecord: 0.4ms)
+Started GET "/users/edit" for 127.0.0.1 at 2017-03-01 17:11:56 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (43.3ms)
+  Rendered layouts/_navigation.html.haml (20.5ms)
+Completed 200 OK in 175ms (Views: 151.3ms | ActiveRecord: 3.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "preference") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "a@test.com"], ["encrypted_password", "$2a$04$sVc8xUtpJe9UQYHhDdiPCOzzwUoFKr2Ozub.HFiNsYTBPUKjcDLJ."], ["created_at", 2017-03-01 17:11:56 UTC], ["updated_at", 2017-03-01 17:11:56 UTC], ["preference", "left"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.3ms)[0m  [1m[35mALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "student" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "papers" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.0ms)[0m  [1m[34m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'notmynews_test'[0m
+  [1m[35m (31.5ms)[0m  [1m[35mTRUNCATE TABLE "public"."ar_internal_metadata", "public"."student", "public"."users", "public"."papers" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "student" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "papers" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:24 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (13.0ms)
+  Rendered layouts/_navigation.html.haml (46.9ms)
+Completed 200 OK in 1000ms (Views: 971.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:25 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (14.1ms)
+  Rendered layouts/_navigation.html.haml (37.7ms)
+Completed 200 OK in 152ms (Views: 131.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:25 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (9.5ms)
+  Rendered layouts/_navigation.html.haml (36.2ms)
+Completed 200 OK in 82ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:26 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.haml (35.3ms)
+Completed 200 OK in 60ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:34:26 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (7.6ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (171.8ms)
+  Rendered layouts/_navigation.html.haml (17.5ms)
+Completed 200 OK in 315ms (Views: 234.7ms | ActiveRecord: 32.7ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:34:26 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (20.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$kpoQB03fHy3ws/5B7W1T/uOXBIp.nYwN83ebiiY8akm5tDXGqwrbq"], ["created_at", 2017-03-01 17:34:26 UTC], ["updated_at", 2017-03-01 17:34:26 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:34:26 UTC], ["last_sign_in_at", 2017-03-01 17:34:26 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:34:26 UTC], ["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 161ms (ActiveRecord: 29.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:26 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (10.6ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (30.8ms)
+Completed 200 OK in 69ms (Views: 64.7ms | ActiveRecord: 1.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:26 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (12.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (65.9ms)
+Completed 200 OK in 109ms (Views: 103.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:26 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (9.4ms)
+  Rendered layouts/_navigation.html.haml (42.6ms)
+Completed 200 OK in 86ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:34:26 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (14.6ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (50.7ms)
+  Rendered layouts/_navigation.html.haml (56.2ms)
+Completed 200 OK in 144ms (Views: 142.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$AdBcHCgKHXP98Xuo6LiwAuoU09jCCyGL/U8AL4zEkU3Arnr3SSn0i"], ["created_at", 2017-03-01 17:34:27 UTC], ["updated_at", 2017-03-01 17:34:27 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:34:27 UTC], ["last_sign_in_at", 2017-03-01 17:34:27 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:34:27 UTC], ["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 56ms (ActiveRecord: 2.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (14.6ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (48.8ms)
+Completed 200 OK in 104ms (Views: 95.2ms | ActiveRecord: 1.4ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (7.8ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (42.5ms)
+Completed 200 OK in 82ms (Views: 75.6ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (11.9ms)
+  Rendered layouts/_navigation.html.haml (26.5ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (4.7ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (24.5ms)
+  Rendered layouts/_navigation.html.haml (8.8ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (6.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$eV/UnLv4ztya9ZpRG5I6duBjq4hVt33Xu3bn3azTXNF8G13/QLBj6"], ["created_at", 2017-03-01 17:34:27 UTC], ["updated_at", 2017-03-01 17:34:27 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:34:27 UTC], ["last_sign_in_at", 2017-03-01 17:34:27 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:34:27 UTC], ["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 56ms (ActiveRecord: 8.8ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (9.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (33.8ms)
+Completed 200 OK in 67ms (Views: 62.9ms | ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (27.2ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 15ms (ActiveRecord: 1.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (9.5ms)
+  Rendered layouts/_navigation.html.haml (8.3ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (7.4ms)
+  Rendered layouts/_navigation.html.haml (15.0ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in?class=sign-in" for 127.0.0.1 at 2017-03-01 17:34:27 +0000
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"class"=>"sign-in"}
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (4.1ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (19.1ms)
+  Rendered layouts/_navigation.html.haml (46.3ms)
+Completed 200 OK in 104ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-03-01 17:34:28 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", 2017-03-01 17:34:28 UTC], ["sign_in_count", 2], ["updated_at", 2017-03-01 17:34:28 UTC], ["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 34ms (ActiveRecord: 1.5ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:28 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (5.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (20.0ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:28 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (10.1ms)
+  Rendered layouts/_navigation.html.haml (19.1ms)
+Completed 200 OK in 61ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up?class=sign-up" for 127.0.0.1 at 2017-03-01 17:34:28 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.0ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (22.2ms)
+  Rendered layouts/_navigation.html.haml (15.5ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-03-01 17:34:28 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+Unpermitted parameter: preference
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "$2a$04$0dOmyp6FXcBH2pseaHGvSO1q4NgTpp/gOxGbMSezynSsTlf9BUm1O"], ["created_at", 2017-03-01 17:34:28 UTC], ["updated_at", 2017-03-01 17:34:28 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-01 17:34:28 UTC], ["last_sign_in_at", 2017-03-01 17:34:28 UTC], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", 2017-03-01 17:34:28 UTC], ["id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 31ms (ActiveRecord: 2.3ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:28 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (7.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (33.9ms)
+Completed 200 OK in 56ms (Views: 51.8ms | ActiveRecord: 0.5ms)
+Started GET "/users/edit" for 127.0.0.1 at 2017-03-01 17:34:28 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (21.1ms)
+  Rendered layouts/_navigation.html.haml (13.3ms)
+Completed 200 OK in 68ms (Views: 62.3ms | ActiveRecord: 0.5ms)
+Started PUT "/users" for 127.0.0.1 at 2017-03-01 17:34:28 +0000
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"john@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "preference"=>"right"}, "commit"=>"Update"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "preference" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["preference", "right"], ["updated_at", 2017-03-01 17:34:28 UTC], ["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 51ms (ActiveRecord: 11.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-01 17:34:28 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (16.3ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (21.3ms)
+Completed 200 OK in 71ms (Views: 63.5ms | ActiveRecord: 1.4ms)
+Started GET "/users/edit" for 127.0.0.1 at 2017-03-01 17:34:28 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (17.1ms)
+  Rendered layouts/_navigation.html.haml (11.9ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "preference") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "a@test.com"], ["encrypted_password", "$2a$04$Fe5xbg.Y/k.O2/TNf6NG9OqlE22xluNIrgP9SqRiWJJqAzmCLYD7O"], ["created_at", 2017-03-01 17:34:28 UTC], ["updated_at", 2017-03-01 17:34:28 UTC], ["preference", "left"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
