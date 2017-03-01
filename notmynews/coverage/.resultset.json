@@ -11,7 +11,6 @@
         1,
         null,
         null,
-        null,
         null
       ],
       "/Users/Basile/Desktop/makers_2017/projects/week9/NotMyNews/notmynews/spec/rails_helper.rb": [
@@ -581,7 +580,15 @@
         1,
         null
       ],
+<<<<<<< HEAD
       "/Users/Basile/Desktop/makers_2017/projects/week9/NotMyNews/notmynews/spec/support/database_cleaner.rb": [
+=======
+      "/Users/Mazza/rails/NotMyNews/notmynews/app/helpers/stories_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Mazza/rails/NotMyNews/notmynews/spec/support/database_cleaner.rb": [
+>>>>>>> master
         1,
         null,
         1,
@@ -669,7 +676,6 @@
         1,
         1,
         1,
-        1,
         null,
         1,
         1,
@@ -717,6 +723,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1488360564
+=======
+    "timestamp": 1488301757
+>>>>>>> master
   }
 }
