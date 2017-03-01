@@ -1,4 +1,4 @@
-def sign_up(email: 'john@example.com', password: 'shoobydooby', preference: 'left')
+def sign_up(email: 'john@example.com', password: 'shoobydooby', preference: 'Left')
   visit ('/')
   click_link 'Sign up'
   fill_in 'Email', with: email

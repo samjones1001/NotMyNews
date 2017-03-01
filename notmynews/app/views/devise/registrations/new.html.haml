@@ -20,7 +20,7 @@
     .field
       = f.label :preference
       %br/
-      = f.select "preference", [["left", "Left"], ["right", "Right"], ["centre", "Centre"]]
+      = f.select "preference", [["Left", "left"], ["Right", "right"], ["Centre", "centre"]]
     .actions
       = f.submit "Sign up"
   = render "devise/shared/links"

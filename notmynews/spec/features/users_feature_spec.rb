@@ -37,9 +37,16 @@ feature "User can sign in and out" do
   end
 
   context "user is able to save news preference" do
-    scenario 'user selects left' do
+    scenario 'user selects right' do
       sign_up
-
+      click_link 'Setting'
+      select 'Right', from: 'Preference'
+      fill_in 'Current password', with: 'shoobydooby'
+      click_button 'Update'
+      click_link 'Setting'
+      within('div#preference') do
+        expect(page).to have_content('right')
+      end
     end
   end
 end
