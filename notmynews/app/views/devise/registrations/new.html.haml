@@ -17,6 +17,10 @@
       = f.label :password_confirmation
       %br/
       = f.password_field :password_confirmation, autocomplete: "off"
+    .field
+      = f.label :preference
+      %br/
+      = f.select "preference", [["left", "Left"], ["right", "Right"], ["centre", "Centre"]]
     .actions
       = f.submit "Sign up"
   = render "devise/shared/links"

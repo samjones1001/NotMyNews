@@ -35,4 +35,11 @@ feature "User can sign in and out" do
       expect(page).to have_content('Signed in successfully')
     end
   end
+
+  context "user is able to save news preference" do
+    scenario 'user selects left' do
+      sign_up
+
+    end
+  end
 end
