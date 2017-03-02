@@ -10,11 +10,13 @@ $(document).ready(function(){
     });
   }
 
-  var papers = ['buzzfeed', 'the-guardian-uk', 'the-huffington-post', 'the-new-york-times', 'mirror'];
+  $.get('http://localhost:3000/papers', function(data){
+    papers = data.paper
 
-  for (var k = 0; k < 3; k++){
-    for (var i = 0; i < papers.length; i++){
-      newsArticles(papers[i], k);
+   for (var k = 0; k < 3; k++){
+     for (var i = 0; i < papers.length; i++){
+       newsArticles(papers[i], k);
+      }
     }
-  }
+  })
 });
