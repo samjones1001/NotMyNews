@@ -14,3 +14,49 @@
  *= require_tree .
  *= require_self
  */
+ .storyphoto {
+   float: left;
+   height: 100px;
+   width: 150px;
+   object-fit: cover;
+ }
+
+ .storyinfo {
+   float: right;
+   width: 75%;
+ }
+
+ .storyinfo a{
+   font-weight: 900;
+ }
+
+ .storylist {
+   list-style: none;
+   padding-right: 40px;
+ }
+
+.splashbox {
+  overflow: hidden;
+}
+
+.storysplitter {
+  height: 30px;
+  border-style: solid;
+  border-color: #d2d5d6;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+.storysplitter:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #d2d5d6;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+/*.storysplitter {
+   border-top: 1px dotted #8c8b8b;
+   border-bottom: 1px dotted #fff;
+}*/
