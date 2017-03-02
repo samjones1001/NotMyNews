@@ -34,7 +34,7 @@
               %a{:href => "/"} Home
             - if user_signed_in?
               %li{:role => "presentation"}
-                =link_to "Sign out", destroy_user_session_path, method: :delete
+                =link_to "Sign out", destroy_user_session_path, method: :get
               %li{:role => "presentation"}
                 =link_to "Setting", edit_user_registration_path
             - else
