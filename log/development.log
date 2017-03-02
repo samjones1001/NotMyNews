@@ -865,3 +865,830 @@ Processing by PapersController#index as */*
 Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 7.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-03-02 11:01:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (19.1ms)
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (86.1ms)
+Completed 200 OK in 1675ms (Views: 1627.4ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 11:01:25 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 11:01:29 +0000
+Processing by PapersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (2.9ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2017-03-02 11:01:32 +0000
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (5.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (22.5ms)
+Completed 200 OK in 375ms (Views: 371.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 11:01:33 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (5.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 18ms (Views: 0.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:25:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (14.2ms)
+  Rendered layouts/_navigation.html.haml (26.9ms)
+Completed 200 OK in 1500ms (Views: 1465.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:25:56 +0000
+Processing by PapersController#index as */*
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `preference' for nil:NilClass
+Did you mean?  presence):
+  
+app/controllers/papers_controller.rb:4:in `index'
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.9ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (50.0ms)
+Started GET "/welcome" for 127.0.0.1 at 2017-03-02 14:29:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [32 times] (16.7ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.2ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (119.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:32:04 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.haml (22.8ms)
+Completed 200 OK in 653ms (Views: 644.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:32:06 +0000
+Processing by PapersController#index as */*
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `preference' for nil:NilClass
+Did you mean?  presence):
+  
+app/controllers/papers_controller.rb:4:in `index'
+Started GET "/stories" for 127.0.0.1 at 2017-03-02 14:32:06 +0000
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.7ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (49.8ms)
+Processing by StoriesController#index as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant StoriesController::Papers):
+  
+app/controllers/stories_controller.rb:4:in `index'
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.8ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (53.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:32:10 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (4.9ms)
+  Rendered layouts/_navigation.html.haml (9.4ms)
+Completed 200 OK in 241ms (Views: 239.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:32:12 +0000
+Processing by PapersController#index as */*
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `preference' for nil:NilClass
+Did you mean?  presence):
+  
+app/controllers/papers_controller.rb:4:in `index'
+Started GET "/stories" for 127.0.0.1 at 2017-03-02 14:32:12 +0000
+Processing by StoriesController#index as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant StoriesController::Papers):
+  
+app/controllers/stories_controller.rb:4:in `index'
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.7ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.9ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (6.1ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (129.8ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (74.7ms)
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:33:46 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.haml (36.6ms)
+Completed 200 OK in 316ms (Views: 311.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:33:47 +0000
+Processing by PapersController#index as */*
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2017-03-02 14:33:47 +0000
+  
+NoMethodError (undefined method `all?' for Paper(id: integer, title: string, position: string):Class
+Did you mean?  all):
+  
+app/controllers/papers_controller.rb:7:in `index'
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (1.0ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (50.6ms)
+Processing by StoriesController#index as */*
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.haml (8.6ms)
+Completed 200 OK in 206ms (Views: 201.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:33:54 +0000
+Processing by PapersController#index as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all?' for Paper(id: integer, title: string, position: string):Class
+Did you mean?  all):
+  
+app/controllers/papers_controller.rb:7:in `index'
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.9ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.3ms)
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:34:24 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.haml (45.0ms)
+Completed 200 OK in 567ms (Views: 563.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:34:26 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (4.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:34:26 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (4.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:34:33 +0000
+Processing by PapersController#index as HTML
+  [1m[36mPaper Load (0.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:37:10 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    10:         .col-lg-6
+    11:           %h4 What is NotMyNews?
+    12:           %p  Quickly browse headlines and articles from the news sources you usually avoid.
+    13:               Simply select whether you would like to be displayed articles from left, right or
+    14:               centrist news outlets and have the latest articles delivered in one easy to read news feed.
+    15:           %div#splashscreen
+    16:     %footer.footer
+  
+app/views/welcome/index.html.haml:13
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (18.2ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.7ms)
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:37:36 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.haml (19.2ms)
+Completed 200 OK in 230ms (Views: 229.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:37:37 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:37:37 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (4.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:38:02 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     8:           %a.btn.btn-lg.btn-success{:href => new_user_registration_path, :role => "button"} Sign up today
+     9:       .row.marketing
+    10:       
+    11:           %h4 What is NotMyNews?
+    12:           %p  Quickly browse headlines and articles from the news sources you usually avoid. Simply select whether you would like to be displayed articles from left, right or centrist news outlets and have the latest articles delivered in one easy to read news feed.
+    13:           %div#splashscreen
+    14:     %footer.footer
+  
+app/views/welcome/index.html.haml:11
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.5ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:38:13 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     7:         %p
+     8:           %a.btn.btn-lg.btn-success{:href => new_user_registration_path, :role => "button"} Sign up today
+     9:       .row.marketing      
+    10:           %h4 What is NotMyNews?
+    11:           %p  Quickly browse headlines and articles from the news sources you usually avoid. Simply select whether you would like to be displayed articles from left, right or centrist news outlets and have the latest articles delivered in one easy to read news feed.
+    12:           %div#splashscreen
+    13:     %footer.footer
+  
+app/views/welcome/index.html.haml:10
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.3ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.3ms)
+  Rendering /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.2ms)
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:38:22 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (7.7ms)
+  Rendered layouts/_navigation.html.haml (36.7ms)
+Completed 200 OK in 302ms (Views: 301.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:38:23 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:38:23 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:39:05 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (12.8ms)
+  Rendered layouts/_navigation.html.haml (17.5ms)
+Completed 200 OK in 291ms (Views: 290.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:39:06 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:39:06 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:39:24 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.haml (19.8ms)
+Completed 200 OK in 277ms (Views: 275.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:39:25 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:39:25 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:40:32 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (10.4ms)
+  Rendered layouts/_navigation.html.haml (18.0ms)
+Completed 200 OK in 518ms (Views: 516.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:40:33 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:40:53 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.haml (22.3ms)
+Completed 200 OK in 560ms (Views: 558.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:40:54 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (3.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:40:54 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:41:33 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (4.9ms)
+  Rendered layouts/_navigation.html.haml (16.5ms)
+Completed 200 OK in 557ms (Views: 555.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:41:34 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:41:34 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:42:36 +0000
+Processing by PapersController#index as HTML
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:43:07 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.haml (12.6ms)
+Completed 200 OK in 562ms (Views: 560.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:43:08 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (2.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:43:08 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:44:12 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.haml (19.6ms)
+Completed 200 OK in 573ms (Views: 568.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:44:14 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:44:14 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:45:05 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (11.2ms)
+  Rendered layouts/_navigation.html.haml (15.8ms)
+Completed 200 OK in 526ms (Views: 523.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:45:07 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:45:07 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:46:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.haml (33.1ms)
+Completed 200 OK in 504ms (Views: 503.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:46:29 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:46:29 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:46:34 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.haml (15.9ms)
+Completed 200 OK in 242ms (Views: 241.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:46:35 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:46:35 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:46:47 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.haml (21.8ms)
+Completed 200 OK in 230ms (Views: 228.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:46:48 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:46:48 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:46:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (7.4ms)
+  Rendered layouts/_navigation.html.haml (30.2ms)
+Completed 200 OK in 226ms (Views: 224.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:46:55 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:46:55 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:47:08 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.haml (14.6ms)
+Completed 200 OK in 210ms (Views: 208.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:09 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:09 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:47:13 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (6.7ms)
+  Rendered layouts/_navigation.html.haml (13.5ms)
+Completed 200 OK in 243ms (Views: 241.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:14 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.9ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:15 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.9ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:47:26 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.4ms)
+  Rendered layouts/_navigation.html.haml (7.0ms)
+Completed 200 OK in 517ms (Views: 515.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:28 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:28 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:47:34 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.haml (19.2ms)
+Completed 200 OK in 230ms (Views: 229.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:35 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:35 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (3.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:47:39 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (8.8ms)
+  Rendered layouts/_navigation.html.haml (15.3ms)
+Completed 200 OK in 252ms (Views: 251.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:40 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:40 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:47:44 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.haml (22.3ms)
+Completed 200 OK in 243ms (Views: 241.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:45 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:45 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (2.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:47:49 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.haml (15.7ms)
+Completed 200 OK in 224ms (Views: 222.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:50 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (2.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:50 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (4.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:47:55 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.haml (15.1ms)
+Completed 200 OK in 237ms (Views: 236.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:56 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:47:56 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:48:01 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (8.0ms)
+  Rendered layouts/_navigation.html.haml (19.1ms)
+Completed 200 OK in 258ms (Views: 255.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:48:02 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:48:02 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (4.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-02 14:48:06 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.haml (24.7ms)
+Completed 200 OK in 233ms (Views: 232.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:48:07 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2017-03-02 14:48:07 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (0.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
