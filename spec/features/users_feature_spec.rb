@@ -49,4 +49,18 @@ feature "User can sign in and out" do
       end
     end
   end
+
+  context "user must logged in to see stories" do
+    scenario 'user can see stories if logged in' do
+      sign_up
+      visit '/stories'
+      expect(current_path).to eq '/stories'
+    end
+
+    scenario 'user cannot see stories' do
+      visit '/stories'
+      expect(current_path).to eq '/users/sign_in'
+    end
+  end
+
 end
