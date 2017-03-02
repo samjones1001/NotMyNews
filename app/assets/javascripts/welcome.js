@@ -10,13 +10,13 @@ $(document).ready(function(){
     });
   }
 
-  $.get('http://localhost:3000/papers', function(data){
-    papers = data.paper
+  $.get('/papers', function(data){
+    var papers = data.paper;
 
 
      for (var i = 0; i < 3; i++){
-       newsArticles(papers[Math.floor((Math.random() * 15))], 0);
+       newsArticles(papers[Math.floor((Math.random() * papers.length))], 0);
       }
 
-  })
+  });
 });

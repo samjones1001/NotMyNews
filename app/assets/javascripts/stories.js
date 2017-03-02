@@ -22,13 +22,13 @@ $(document).ready(function(){
     });
   }
 
-  $.get('http://localhost:3000/papers', function(data){
-    papers = data.paper
+  $.get('/papers', function(data){
+    var papers = data.paper;
 
    for (var k = 0; k < 3; k++){
      for (var i = 0; i < papers.length; i++){
        newsArticles(papers[i], k);
       }
     }
-  })
+  });
 });
