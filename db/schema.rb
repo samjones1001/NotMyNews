@@ -29,8 +29,6 @@ ActiveRecord::Schema.define(version: 20170302112915) do
     t.index ["user_id"], name: "index_saved_links_on_user_id", using: :btree
 
 
-  create_table "student", id: :integer, force: :cascade do |t|
-    t.text "name", null: false
 
   create_table "papers", force: :cascade do |t|
     t.string   "title"
