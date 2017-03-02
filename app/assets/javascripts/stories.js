@@ -9,9 +9,8 @@ $(document).ready(function(){
       $('#storylist').append("<ul><li>" + "<a href='" + data.articles[articleNo].url + "'>"
          + data.articles[articleNo].title + "</a>" + "<br>" + data.articles[articleNo].description
          + "<br>" + paperName + "<br><img src='" + data.articles[articleNo].urlToImage
-         + "' height='150'><br></li></ul><br>" +
-         "<iframe width='0' height='0' border='0' name='dummyframe' id='dummyframe' style='display:none;''></iframe>"
-         + "<form action='/savedlinks' method='post' target='dummyframe'>"
+         + "' height='150'><br></li></ul><br>"
+         + "<form action='/savedlinks' method='post'>"
          + "<input class='input' type='text' style='display:none;' name='Title' value='"  + data.articles[articleNo].title + "'>"
          + "<input class='input' type='text' style='display:none;' name='Url' value='" + data.articles[articleNo].url + "'>"
          + "<input class='input' type='text' style='display:none;' name='Description' value='" + data.articles[articleNo].description +"'>"
