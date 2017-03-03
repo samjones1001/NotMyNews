@@ -62,6 +62,10 @@
   padding-right: 40px;
 }
 
+.storybox {
+  overflow:hidden;
+}
+
 /*.storysplitter {
    border-top: 1px dotted #8c8b8b;
    border-bottom: 1px dotted #fff;

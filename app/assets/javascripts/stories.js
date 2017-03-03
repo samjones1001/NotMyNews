@@ -17,9 +17,9 @@ function newsArticles(source, articleNo) {
   var url = 'https://newsapi.org/v1/articles?source=' + source + '&apiKey=' + apiKey;
   $.get(url , function(data) {
     var paperName = source.replace(/-/g, " ").toUpperCase();
-    $('#storylist').append("<li>" + "<a href='" + data.articles[articleNo].url + "'>"
+    $('#storylist').append("<li style='list-style:none'><div class='storybox'><div class='storyinfo'>" + "<a href='" + data.articles[articleNo].url + "'>"
        + data.articles[articleNo].title + "</a>" + "<br>" + data.articles[articleNo].description
-       + "<br>" + paperName + "<br><img src='" + data.articles[articleNo].urlToImage
+       + "<br>" + paperName + "</div><br><img class='storyphoto' src='" + data.articles[articleNo].urlToImage
        + "' height='150'>" +
        "<iframe width='0' height='0' border='0' name='dummyframe' id='dummyframe' style='display:none;''></iframe>"
        + "<form action='/savedlinks' method='post' target='dummyframe'>"
@@ -29,8 +29,8 @@ function newsArticles(source, articleNo) {
        + "<input class='input' type='text'  style='display:none;' name='Source' value='" + paperName + "'>"
        + "<input class='input' type='text' style='display:none;' name='Image' value='" + data.articles[articleNo].urlToImage + "'>"
        + "<input type='submit' value='Save'>"
-       + "</form>"  
-       + "<br></li><br>"
+       + "</form>"
+       + "<br></div></li><hr class='storysplitter'><br>"
     );
   });
 }
