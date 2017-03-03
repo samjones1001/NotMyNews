@@ -6,7 +6,10 @@
 				%h5= link_to savedlink.title, savedlink.url
 				%h5= savedlink.subtitle
 				=image_tag savedlink.imageurl, size: "280x150"
-				%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
+				%br
+				= link_to savedlink_path(savedlink), method: :delete, class: "delete" do
+					= "Delete"
+					%span.glyphicon.glyphicon-remove
 - else
 	%h5 No saved links yet!
 %p
