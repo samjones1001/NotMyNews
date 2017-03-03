@@ -31,9 +31,9 @@
         %nav
           %ul.nav.nav-pills.pull-left
             %li.active{:role => "presentation"}
-               =link_to root_path, method: :get, class: "home" do
-                 = "Home"
-                 %span.glyphicon.glyphicon-home
+              =link_to root_path, method: :get, class: "home" do
+                = "Home"
+                %span.glyphicon.glyphicon-home
             - if user_signed_in?
               %li.active{:role => "presentation"}
                 =link_to savedlinks_path, method: :get, class: "saved" do
