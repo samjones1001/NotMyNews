@@ -6,7 +6,7 @@ class SavedlinksController < ApplicationController
 	end
 
 	def create
-		savedlink = SavedLink.where(user_id: current_user).create do |link| 
+		savedlink = SavedLink.where(user_id: current_user).create do |link|
 			link.title = params[:Title]
 			link.subtitle = params[:Description]
 			link.url = params[:Url]
