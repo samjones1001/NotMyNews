@@ -4481,3 +4481,500 @@ Migrating to CreatePapers (20170302112915)
   [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "papers" ("title", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "metro"], ["position", "right"], ["created_at", 2017-03-03 10:19:44 UTC], ["updated_at", 2017-03-03 10:19:44 UTC]]
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:26:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 43ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-03-03 10:26:52 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (7.1ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (43.7ms)
+  Rendered layouts/_navigation.html.haml (10.6ms)
+Completed 200 OK in 657ms (Views: 640.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:26:53 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (53.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 124ms (Views: 0.5ms | ActiveRecord: 103.7ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:26:53 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (5.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-03-03 10:27:04 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pWPRD4BceNmR0uuCuLXP0ncFyPyZu0V1aH57dtZhepefAaioy+Y7sqgb8yOeEitzby2qREFJcFomglQDQZh8Tg==", "user"=>{"email"=>"BDavro@comedy.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "bdavro@comedy.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 27ms (ActiveRecord: 12.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pWPRD4BceNmR0uuCuLXP0ncFyPyZu0V1aH57dtZhepefAaioy+Y7sqgb8yOeEitzby2qREFJcFomglQDQZh8Tg==", "user"=>{"email"=>"BDavro@comedy.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (13.0ms)
+  Rendered layouts/_navigation.html.haml (23.8ms)
+Completed 200 OK in 426ms (Views: 181.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:27:04 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (20.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 24ms (Views: 0.5ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:27:04 +0000
+Processing by PapersController#index as */*
+  [1m[36mPaper Load (1.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers"[0m
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_up?class=sign-up" for ::1 at 2017-03-03 10:27:19 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"class"=>"sign-up"}
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.6ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (19.8ms)
+  Rendered layouts/_navigation.html.haml (22.3ms)
+Completed 200 OK in 164ms (Views: 161.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-03-03 10:27:29 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+FTrGiv7MYxC7Fpsy2kZMqbIWMg1FLz0olWkDqm3zz6lSZMdzP0mSNVPiRGrmpS/lJ2LUzxe/Xt23r9C+Vh1uw==", "user"=>{"email"=>"BDavro@comedy.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "preference"=>"left"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bdavro@comedy.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "preference") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "bdavro@comedy.com"], ["encrypted_password", "$2a$11$BmsH9sUrJ33i6jV.lj8R9.al0wnTAn2u32beGK.F39v4RSg54Di2q"], ["created_at", 2017-03-03 10:27:29 UTC], ["updated_at", 2017-03-03 10:27:29 UTC], ["preference", "left"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-03 10:27:29 UTC], ["last_sign_in_at", 2017-03-03 10:27:29 UTC], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "::1/128"], ["updated_at", 2017-03-03 10:27:29 UTC], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/savedlinks
+Completed 302 Found in 332ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:27:29 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.haml (12.9ms)
+Completed 200 OK in 167ms (Views: 117.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:27:30 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (3.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:27:30 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (60.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 66ms (Views: 0.5ms | ActiveRecord: 61.7ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 10:27:49 +0000
+Processing by StoriesController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.haml (22.9ms)
+Completed 200 OK in 198ms (Views: 183.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:27:50 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (30.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 36ms (Views: 0.3ms | ActiveRecord: 31.7ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:27:50 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/savedlinks" for ::1 at 2017-03-03 10:27:53 +0000
+Processing by SavedlinksController#create as HTML
+  Parameters: {"Title"=>"Secret trick that lets you get a McDonald", "Url"=>"http://www.mirror.co.uk/news/uk-news/secret-trick-lets-you-mcdonalds-9954427", "Description"=>"It", "Source"=>"MIRROR", "Image"=>"http://i4.mirror.co.uk/incoming/article9664831.ece/ALTERNATES/s1200/McDonalds-takeaway-bag.jpg"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 2.6ms)
+
+
+  
+NoMethodError (undefined method `source=' for #<SavedLink:0x007fcc784eb9d8>):
+  
+app/controllers/savedlinks_controller.rb:14:in `block in create'
+app/controllers/savedlinks_controller.rb:9:in `create'
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.7ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (183.5ms)
+Started POST "/savedlinks" for ::1 at 2017-03-03 10:28:01 +0000
+Processing by SavedlinksController#create as HTML
+  Parameters: {"Title"=>"Tory spending pledges on police, education and childcare ", "Url"=>"https://www.theguardian.com/politics/2017/mar/03/tory-spending-pledges-on-police-education-and-childcare-at-risk", "Description"=>"IPPR believes Philip Hammond’s call for £3.5bn of cuts cannot be met if previous spending pledges are maintained", "Source"=>"THE GUARDIAN UK", "Image"=>"https://i.guim.co.uk/img/media/910cbbe5aa796ecd86da64628b77e528f7099ca5/0_76_3500_2099/master/3500.jpg?w=1200&h=630&q=55&auto=format&usm=12&fit=crop&crop=faces%2Centropy&bm=normal&ba=bottom%2Cleft&blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&s=ca65059faee83f9481c1668bef56e11e"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `source=' for #<SavedLink:0x007fcc777896a0>):
+  
+app/controllers/savedlinks_controller.rb:14:in `block in create'
+app/controllers/savedlinks_controller.rb:9:in `create'
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (135.5ms)
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:28:05 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"6/j642qFMCXpyslTn+Q/V4a75V1HOFEXIUrkrgrsDAzRmoNEIT9zTtAD0fK5Q9v2npOH5Z/KZDhvtsvbnRUK1Q=="}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (12.1ms)
+  Rendered layouts/_navigation.html.haml (37.6ms)
+Completed 200 OK in 189ms (Views: 161.1ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:28:05 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:28:06 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 20.1ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1374437220078200355);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSourceToSavedLinks (20170303103348)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "saved_links" ADD "source" character varying[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170303103348"]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1374437220078200355)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/stories" for ::1 at 2017-03-03 10:34:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.haml (28.0ms)
+Completed 200 OK in 486ms (Views: 352.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:34:09 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (16.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 140ms (Views: 2.3ms | ActiveRecord: 115.4ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:34:09 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (10.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 11.3ms)
+
+
+Started POST "/savedlinks" for ::1 at 2017-03-03 10:34:12 +0000
+Processing by SavedlinksController#create as HTML
+  Parameters: {"Title"=>"Profile: Marcelo Allende, the Chilean youngster on trial Arsenal", "Url"=>"http://www.mirror.co.uk/sport/football/news/profile-marcelo-allende-chilean-youngster-9946622", "Description"=>"The 17-year-old currently plays for Chilean club Deportes Santa Cruz but looks likely to join Arsenal this summer", "Source"=>"MIRROR", "Image"=>"http://i3.mirror.co.uk/incoming/article9946503.ece/ALTERNATES/s1200/Arsenal-Training-Session.jpg"}
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (13.3ms)[0m  [1m[32mINSERT INTO "saved_links" ("title", "subtitle", "url", "imageurl", "created_at", "updated_at", "user_id", "source") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Profile: Marcelo Allende, the Chilean youngster on trial Arsenal"], ["subtitle", "The 17-year-old currently plays for Chilean club Deportes Santa Cruz but looks likely to join Arsenal this summer"], ["url", "http://www.mirror.co.uk/sport/football/news/profile-marcelo-allende-chilean-youngster-9946622"], ["imageurl", "http://i3.mirror.co.uk/incoming/article9946503.ece/ALTERNATES/s1200/Arsenal-Training-Session.jpg"], ["created_at", 2017-03-03 10:34:12 UTC], ["updated_at", 2017-03-03 10:34:12 UTC], ["user_id", 1], ["source", "MIRROR"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for SavedlinksController#create, rendering head :no_content
+Completed 204 No Content in 295ms (ActiveRecord: 35.3ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:34:14 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"8OmHrvIlYC/J133jy+H1nh4sSkFPobTlczPnF8COpXXKi/4JuZ8jRPAeZULtRhE/BgQo+ZdTgco9z8hiV3ejrA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.3ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (7.0ms)
+  Rendered layouts/_navigation.html.haml (9.3ms)
+Completed 200 OK in 218ms (Views: 176.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:34:14 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (36.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (6.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 53ms (Views: 0.9ms | ActiveRecord: 42.8ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:34:14 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.9ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/savedlinks/1" for ::1 at 2017-03-03 10:34:41 +0000
+Processing by SavedlinksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S4+vlbB0VivSA8k7Nfq7hG4iv71QzxIGgqUJyvxOO/xx7dYy+84VQOvK0ZoTXV8ldgrdBYg9JynMWSa/a7c9JQ==", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSavedLink Load (0.4ms)[0m  [1m[34mSELECT  "saved_links".* FROM "saved_links" WHERE "saved_links"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "saved_links" WHERE "saved_links"."id" = $1[0m  [["id", 1]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/savedlinks
+Completed 302 Found in 16ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:34:41 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.haml (23.6ms)
+Completed 200 OK in 133ms (Views: 128.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:34:41 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (213.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 226ms (Views: 0.4ms | ActiveRecord: 220.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:34:42 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (24.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-03 10:35:05 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (9.0ms)
+Started GET "/" for ::1 at 2017-03-03 10:35:05 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (6.4ms)
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (142.6ms)
+Completed 200 OK in 473ms (Views: 438.8ms | ActiveRecord: 13.4ms)
+
+
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (47.4ms)
+Completed 200 OK in 693ms (Views: 678.7ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:35:07 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (234.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (14.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 254ms (Views: 0.3ms | ActiveRecord: 249.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:35:07 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 157ms (Views: 0.3ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/" for ::1 at 2017-03-03 10:36:37 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (30.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (12.5ms)
+Completed 200 OK in 159ms (Views: 152.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:36:37 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:36:37 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 61ms (Views: 24.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 10:36:39 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"authenticity_token"=>"WdxdPTXL7I41dltHF+LTfyiwHAwxUcsdBYtqmT+MJ/tjviSafnGv5Qy/Q+YxRTfeMJh+tOmj/jJLd0XsqHUhIg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (4.0ms)
+  Rendered layouts/_navigation.html.haml (9.8ms)
+Completed 200 OK in 199ms (Views: 194.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:36:39 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (3.9ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:36:39 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-03 10:36:44 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (5.4ms)
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (38.2ms)
+Completed 200 OK in 153ms (Views: 126.6ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 10:36:49 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"authenticity_token"=>"b/gPnKXyzNZpwg+BNFp09LzriEbyDX6oiYCnvm1lHHVVmnY77kiPvVALFyAS/ZBVpMPq/ir/S4fHfIjL+pwarA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.haml (20.1ms)
+Completed 200 OK in 187ms (Views: 179.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:36:49 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (39.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.9ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 51ms (Views: 0.8ms | ActiveRecord: 40.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:36:49 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (39.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 46ms (Views: 0.3ms | ActiveRecord: 40.3ms)
+
+
+Started POST "/savedlinks" for ::1 at 2017-03-03 10:36:51 +0000
+Processing by SavedlinksController#create as HTML
+  Parameters: {"Title"=>"Profile: Marcelo Allende, the Chilean youngster on trial Arsenal", "Url"=>"http://www.mirror.co.uk/sport/football/news/profile-marcelo-allende-chilean-youngster-9946622", "Description"=>"The 17-year-old currently plays for Chilean club Deportes Santa Cruz but looks likely to join Arsenal this summer", "Source"=>"MIRROR", "Image"=>"http://i3.mirror.co.uk/incoming/article9946503.ece/ALTERNATES/s1200/Arsenal-Training-Session.jpg"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (13.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "saved_links" ("title", "subtitle", "url", "imageurl", "created_at", "updated_at", "user_id", "source") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Profile: Marcelo Allende, the Chilean youngster on trial Arsenal"], ["subtitle", "The 17-year-old currently plays for Chilean club Deportes Santa Cruz but looks likely to join Arsenal this summer"], ["url", "http://www.mirror.co.uk/sport/football/news/profile-marcelo-allende-chilean-youngster-9946622"], ["imageurl", "http://i3.mirror.co.uk/incoming/article9946503.ece/ALTERNATES/s1200/Arsenal-Training-Session.jpg"], ["created_at", 2017-03-03 10:36:51 UTC], ["updated_at", 2017-03-03 10:36:51 UTC], ["user_id", 1], ["source", "MIRROR"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+No template found for SavedlinksController#create, rendering head :no_content
+Completed 204 No Content in 257ms (ActiveRecord: 19.5ms)
+
+
+Started POST "/savedlinks" for ::1 at 2017-03-03 10:36:54 +0000
+Processing by SavedlinksController#create as HTML
+  Parameters: {"Title"=>"Mike Pence Used Personal Email As Governor And Was Hacked", "Url"=>"http://www.huffingtonpost.com/entry/mike-pence-email-hacked_us_58b8bc9ae4b0d2821b4ceac1?pl6hcqxb82jfw29&ncid=inblnkushpmg00000009", "Description"=>"Some emails contained information deemed too sensitive to release to the public.", "Source"=>"THE HUFFINGTON POST", "Image"=>"http://img.huffingtonpost.com/asset/2000_1000/58b8bd581900003600bd67d2.jpeg?cache=jwirwt7thx"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (6.9ms)[0m  [1m[32mINSERT INTO "saved_links" ("title", "subtitle", "url", "imageurl", "created_at", "updated_at", "user_id", "source") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Mike Pence Used Personal Email As Governor And Was Hacked"], ["subtitle", "Some emails contained information deemed too sensitive to release to the public."], ["url", "http://www.huffingtonpost.com/entry/mike-pence-email-hacked_us_58b8bc9ae4b0d2821b4ceac1?pl6hcqxb82jfw29&ncid=inblnkushpmg00000009"], ["imageurl", "http://img.huffingtonpost.com/asset/2000_1000/58b8bd581900003600bd67d2.jpeg?cache=jwirwt7thx"], ["created_at", 2017-03-03 10:36:54 UTC], ["updated_at", 2017-03-03 10:36:54 UTC], ["user_id", 1], ["source", "THE HUFFINGTON POST"]]
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for SavedlinksController#create, rendering head :no_content
+Completed 204 No Content in 249ms (ActiveRecord: 26.6ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:36:57 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"xpJzoXZEKCnMoryuS0y8beADKEtY6IQP2+YW0xZaS5788AoGPf5rQvVrpA9t61jM+CtK84AasSCVGjmmgaNNRw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.3ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (12.8ms)
+  Rendered layouts/_navigation.html.haml (17.5ms)
+Completed 200 OK in 212ms (Views: 193.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:36:57 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (16.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:36:58 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (28.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 33ms (Views: 0.5ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-03 10:37:10 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.haml within layouts/application
+  Rendered welcome/index.html.haml within layouts/application (5.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.haml (9.2ms)
+Completed 200 OK in 127ms (Views: 124.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 10:37:15 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"authenticity_token"=>"FRjUeFDU9Wnxj5Z+g8aIS7XcJEbAHuorvD1chEzjxr4veq3fG262AshGjt+lYWzqrfRG/hjs3wTywXPx2xrAZw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (2.4ms)
+  Rendered layouts/_navigation.html.haml (17.2ms)
+Completed 200 OK in 157ms (Views: 151.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:37:15 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (44.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 54ms (Views: 0.3ms | ActiveRecord: 47.3ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:37:15 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (6.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 7.6ms)
+
+
