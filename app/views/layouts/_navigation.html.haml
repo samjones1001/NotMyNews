@@ -35,19 +35,19 @@
                  = "Home"
                  %span.glyphicon.glyphicon-home
             - if user_signed_in?
-              %li{:role => "presentation"}
-              =link_to savedlinks_path, method: :get, class: "saved" do
-                = "Saved links"
-                %span.glyphicon.glyphicon-floppy-disk
-            %li.active{:role => "presentation"}
-              =link_to stories_path, method: :get, class: "stories" do
-                = "Stories"
-                %span.glyphicon.glyphicon-list-alt
-            %li.active{:role => "presentation"}
-              =link_to destroy_user_session_path, method: :get, class: "sign out" do
-                = "Sign out"
-                %span.glyphicon.glyphicon-off
-              %li{:role => "presentation"}
+              %li.active{:role => "presentation"}
+                =link_to savedlinks_path, method: :get, class: "saved" do
+                  = "Saved links"
+                  %span.glyphicon.glyphicon-floppy-disk
+              %li.active{:role => "presentation"}
+                =link_to stories_path, method: :get, class: "stories" do
+                  = "Stories"
+                  %span.glyphicon.glyphicon-list-alt
+              %li.active{:role => "presentation"}
+                =link_to destroy_user_session_path, method: :get, class: "sign out" do
+                  = "Sign out"
+                  %span.glyphicon.glyphicon-off
+              %li.active{:role => "presentation"}
                 =link_to edit_user_registration_path class: "settings" do
                   = "Settings"
                   %span.glyphicon.glyphicon-cog
