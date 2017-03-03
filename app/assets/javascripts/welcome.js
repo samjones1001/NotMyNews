@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  // for(var i = 0; i < 5; i++) {
+  //   document.getElementById('splashscreen').innerHTML += '<p>HI!</p>'
+  // }
 
   function newsArticles(source, articleNo) {
 
@@ -6,7 +9,7 @@ $(document).ready(function(){
     var url = 'https://newsapi.org/v1/articles?source=' + source + '&apiKey=' + apiKey;
     $.get(url , function(data) {
       var paperName = source.replace(/-/g, " ").toUpperCase();
-      $('#splashscreen').append("<ul class='storylist'><li><div class='splashbox'><div class='storyinfo'><a href='" + data.articles[articleNo].url + "'>"  + data.articles[articleNo].title + "</a><br>" + data.articles[articleNo].description  + "<br>" + paperName + "<br></div><img class='storyphoto' src='" + data.articles[articleNo].urlToImage + "'></div></li><hr class='storysplitter'></ul>" );
+      document.getElementById('splashscreen').innerHTML += ("<ul class='storylist'><li><div class='splashbox'><div class='storyinfo'><a href='" + data.articles[articleNo].url + "'>"  + data.articles[articleNo].title + "</a><br>" + data.articles[articleNo].description  + "<br>" + paperName + "<br></div><img class='storyphoto' src='" + data.articles[articleNo].urlToImage + "'></div></li><hr class='storysplitter'></ul>" );
     });
   }
 
