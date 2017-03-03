@@ -1,10 +1,12 @@
 %h4 Saved Links
 - if @savedlinks.all.any?
 	- @savedlinks.all.each do |savedlink|
-		%h5= link_to savedlink.title, savedlink.url
-		%h5= savedlink.subtitle
-		= image_tag savedlink.imageurl
-		%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
+		%ul
+			%li
+				%h5= link_to savedlink.title, savedlink.url
+				%h5= savedlink.subtitle
+				=image_tag savedlink.imageurl, size: "280x150"
+				%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
 - else
 	%h5 No saved links yet!
 %p

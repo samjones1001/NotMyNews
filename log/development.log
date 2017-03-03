@@ -4978,3 +4978,1093 @@ Processing by PapersController#index as */*
 Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 7.6ms)
 
 
+Started GET "/stories" for ::1 at 2017-03-03 10:44:07 +0000
+Processing by StoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (3.9ms)
+  Rendered layouts/_navigation.html.haml (26.0ms)
+Completed 200 OK in 317ms (Views: 297.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:44:08 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (13.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 22ms (Views: 1.0ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:44:08 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 10:44:43 +0000
+Processing by StoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.haml (43.8ms)
+Completed 200 OK in 273ms (Views: 263.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:44:44 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (125.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 139ms (Views: 0.4ms | ActiveRecord: 127.3ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:44:44 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (5.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 10:46:59 +0000
+Processing by StoriesController#index as HTML
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.haml (11.1ms)
+Completed 200 OK in 1828ms (Views: 1814.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:47:01 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (60.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.9ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 68ms (Views: 0.9ms | ActiveRecord: 61.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:47:01 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (42.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (4.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 54ms (Views: 0.3ms | ActiveRecord: 46.6ms)
+
+
+Started POST "/savedlinks" for ::1 at 2017-03-03 10:47:23 +0000
+Processing by SavedlinksController#create as HTML
+  Parameters: {"Title"=>"Robots clothed in human FLESH could become reality", "Url"=>"http://www.mirror.co.uk/tech/robots-clothed-human-flesh-could-9955138", "Description"=>"Researchers from Oxford University reckon robots are the best way of growing human tissue for grafts and transplants", "Source"=>"MIRROR", "Image"=>"http://i3.mirror.co.uk/incoming/article8106088.ece/ALTERNATES/s1200/Synthetic-human.jpg"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "saved_links" ("title", "subtitle", "url", "imageurl", "created_at", "updated_at", "user_id", "source") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Robots clothed in human FLESH could become reality"], ["subtitle", "Researchers from Oxford University reckon robots are the best way of growing human tissue for grafts and transplants"], ["url", "http://www.mirror.co.uk/tech/robots-clothed-human-flesh-could-9955138"], ["imageurl", "http://i3.mirror.co.uk/incoming/article8106088.ece/ALTERNATES/s1200/Synthetic-human.jpg"], ["created_at", 2017-03-03 10:47:23 UTC], ["updated_at", 2017-03-03 10:47:23 UTC], ["user_id", 1], ["source", "MIRROR"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for SavedlinksController#create, rendering head :no_content
+Completed 204 No Content in 291ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:47:25 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"jxBbin8P9HKEaJSk1ONK69wKexKf5yZE4cuN/jf7gy61ciItNLW3Gb2hjAXyRK5KxCIZqkcVE2uvN6KLoAKF9w=="}
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (1.6ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (17.4ms)
+  Rendered layouts/_navigation.html.haml (18.1ms)
+Completed 200 OK in 218ms (Views: 185.3ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:47:25 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (249.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (9.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 266ms (Views: 0.4ms | ActiveRecord: 259.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:47:25 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:55:25 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  Rendered savedlinks/index.html.haml within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     5: 			%h5= link_to savedlink.title, savedlink.url
+     6: 			%h5= savedlink.subtitle
+     7: 	.image
+     8: 			= image_tag savedlink.imageurl
+     9: 			%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
+    10: 	- else
+    11: 		%h5 No saved links yet!
+  
+app/views/savedlinks/index.html.haml:8
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.7ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (109.8ms)
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:57:03 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  Rendered savedlinks/index.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %div and nested within it.):
+     5: 			%h5= link_to savedlink.title, savedlink.url
+     6: 			%h5= savedlink.subtitle
+     7: 	.image = image_tag savedlink.imageurl
+     8: 			%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
+     9: 	- else
+    10: 		%h5 No saved links yet!
+    11: 	%p
+  
+app/views/savedlinks/index.html.haml:8
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.3ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (156.9ms)
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:57:13 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"jxBbin8P9HKEaJSk1ONK69wKexKf5yZE4cuN/jf7gy61ciItNLW3Gb2hjAXyRK5KxCIZqkcVE2uvN6KLoAKF9w=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  Rendered savedlinks/index.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %div and nested within it.):
+     5: 			%h5= link_to savedlink.title, savedlink.url
+     6: 			%h5= savedlink.subtitle
+     7: 	.image = image_tag savedlink.imageurl
+     8: 			%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
+     9: 	- else
+    10: 		%h5 No saved links yet!
+    11: 	%p
+  
+app/views/savedlinks/index.html.haml:8
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.1ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.9ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (137.5ms)
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:58:04 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"jxBbin8P9HKEaJSk1ONK69wKexKf5yZE4cuN/jf7gy61ciItNLW3Gb2hjAXyRK5KxCIZqkcVE2uvN6KLoAKF9w=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.3ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (15.5ms)
+  Rendered layouts/_navigation.html.haml (53.9ms)
+Completed 200 OK in 4532ms (Views: 4518.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:58:09 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"jxBbin8P9HKEaJSk1ONK69wKexKf5yZE4cuN/jf7gy61ciItNLW3Gb2hjAXyRK5KxCIZqkcVE2uvN6KLoAKF9w=="}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.3ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (7.1ms)
+  Rendered layouts/_navigation.html.haml (14.9ms)
+Completed 200 OK in 205ms (Views: 192.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:58:09 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (24.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 49ms (Views: 1.1ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:58:09 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (4.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:58:30 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.3ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (5.2ms)
+  Rendered layouts/_navigation.html.haml (33.8ms)
+Completed 200 OK in 179ms (Views: 159.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:58:31 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:58:31 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:59:07 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.3ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (8.7ms)
+  Rendered layouts/_navigation.html.haml (23.3ms)
+Completed 200 OK in 3372ms (Views: 3365.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:10 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (83.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 125ms (Views: 0.4ms | ActiveRecord: 84.4ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:11 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:59:15 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"jxBbin8P9HKEaJSk1ONK69wKexKf5yZE4cuN/jf7gy61ciItNLW3Gb2hjAXyRK5KxCIZqkcVE2uvN6KLoAKF9w=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.9ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (11.7ms)
+  Rendered layouts/_navigation.html.haml (12.9ms)
+Completed 200 OK in 179ms (Views: 170.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:16 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (54.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 66ms (Views: 0.3ms | ActiveRecord: 61.6ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:16 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (37.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 44ms (Views: 0.3ms | ActiveRecord: 37.8ms)
+
+
+Started DELETE "/savedlinks/4" for ::1 at 2017-03-03 10:59:42 +0000
+Processing by SavedlinksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"92LIFG7EeepJW2Y5kgD75mOmg+3etN29sTlSyc/QT7PNALGzJX46gXCSfpi0px9He47hVQZG6JL/xX28WClJag==", "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSavedLink Load (0.3ms)[0m  [1m[34mSELECT  "saved_links".* FROM "saved_links" WHERE "saved_links"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "saved_links" WHERE "saved_links"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/savedlinks
+Completed 302 Found in 12ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:59:42 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (1.7ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (41.2ms)
+  Rendered layouts/_navigation.html.haml (15.5ms)
+Completed 200 OK in 172ms (Views: 159.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:43 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:43 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (7.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 165ms (Views: 0.5ms | ActiveRecord: 19.5ms)
+
+
+Started DELETE "/savedlinks/3" for ::1 at 2017-03-03 10:59:45 +0000
+Processing by SavedlinksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"q+fJLMZX9h6dpBNwnRdh5JuleCr9A28hSy5LfVTlvpyRhbCLje21daRtC9G7sIVFg40akiXxWg4F0mQIwxy4RQ==", "id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSavedLink Load (0.4ms)[0m  [1m[34mSELECT  "saved_links".* FROM "saved_links" WHERE "saved_links"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "saved_links" WHERE "saved_links"."id" = $1[0m  [["id", 3]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/savedlinks
+Completed 302 Found in 22ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:59:45 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.6ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (9.7ms)
+  Rendered layouts/_navigation.html.haml (20.0ms)
+Completed 200 OK in 183ms (Views: 173.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:45 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:45 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 7.9ms)
+
+
+Started DELETE "/savedlinks/2" for ::1 at 2017-03-03 10:59:52 +0000
+Processing by SavedlinksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wAbKe2mhw97LmfIHRGjNCNfv1jZg3WFHk2JN9l/9m+n6ZLPcIhuAtfJQ6qZizympz8e0jrgvVGjdnmKDyASdMA==", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSavedLink Load (0.3ms)[0m  [1m[34mSELECT  "saved_links".* FROM "saved_links" WHERE "saved_links"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "saved_links" WHERE "saved_links"."id" = $1[0m  [["id", 2]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/savedlinks
+Completed 302 Found in 17ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 10:59:52 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (9.3ms)
+  Rendered layouts/_navigation.html.haml (18.3ms)
+Completed 200 OK in 193ms (Views: 179.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:53 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (22.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 33ms (Views: 0.5ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:53 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (2.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 10:59:55 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"authenticity_token"=>"A0VEopNUbgSvxoG2uqb1cZYqHM0YXpkq5AI7cSe/zTc5Jz0F2O4tb5YPmRecARHQjgJ+dcCsrAWq/hQEsEbL7g=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.haml (32.4ms)
+Completed 200 OK in 169ms (Views: 156.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:55 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (2.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 33ms (Views: 0.5ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 10:59:55 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/savedlinks" for ::1 at 2017-03-03 10:59:57 +0000
+Processing by SavedlinksController#create as HTML
+  Parameters: {"Title"=>"Tory spending pledges on police, education and childcare ", "Url"=>"https://www.theguardian.com/politics/2017/mar/03/tory-spending-pledges-on-police-education-and-childcare-at-risk", "Description"=>"IPPR believes Philip Hammond’s call for £3.5bn of cuts cannot be met if previous spending pledges are maintained", "Source"=>"THE GUARDIAN UK", "Image"=>"https://i.guim.co.uk/img/media/910cbbe5aa796ecd86da64628b77e528f7099ca5/0_76_3500_2099/master/3500.jpg?w=1200&h=630&q=55&auto=format&usm=12&fit=crop&crop=faces%2Centropy&bm=normal&ba=bottom%2Cleft&blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&s=ca65059faee83f9481c1668bef56e11e"}
+  [1m[36mUser Load (15.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "saved_links" ("title", "subtitle", "url", "imageurl", "created_at", "updated_at", "user_id", "source") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Tory spending pledges on police, education and childcare "], ["subtitle", "IPPR believes Philip Hammond’s call for £3.5bn of cuts cannot be met if previous spending pledges are maintained"], ["url", "https://www.theguardian.com/politics/2017/mar/03/tory-spending-pledges-on-police-education-and-childcare-at-risk"], ["imageurl", "https://i.guim.co.uk/img/media/910cbbe5aa796ecd86da64628b77e528f7099ca5/0_76_3500_2099/master/3500.jpg?w=1200&h=630&q=55&auto=format&usm=12&fit=crop&crop=faces%2Centropy&bm=normal&ba=bottom%2Cleft&blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&s=ca65059faee83f9481c1668bef56e11e"], ["created_at", 2017-03-03 10:59:57 UTC], ["updated_at", 2017-03-03 10:59:57 UTC], ["user_id", 1], ["source", "THE GUARDIAN UK"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+No template found for SavedlinksController#create, rendering head :no_content
+Completed 204 No Content in 288ms (ActiveRecord: 17.3ms)
+
+
+Started POST "/savedlinks" for ::1 at 2017-03-03 10:59:59 +0000
+Processing by SavedlinksController#create as HTML
+  Parameters: {"Title"=>"Robots clothed in human FLESH could become reality", "Url"=>"http://www.mirror.co.uk/tech/robots-clothed-human-flesh-could-9955138", "Description"=>"Researchers from Oxford University reckon robots are the best way of growing human tissue for grafts and transplants", "Source"=>"MIRROR", "Image"=>"http://i3.mirror.co.uk/incoming/article8106088.ece/ALTERNATES/s1200/Synthetic-human.jpg"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "saved_links" ("title", "subtitle", "url", "imageurl", "created_at", "updated_at", "user_id", "source") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Robots clothed in human FLESH could become reality"], ["subtitle", "Researchers from Oxford University reckon robots are the best way of growing human tissue for grafts and transplants"], ["url", "http://www.mirror.co.uk/tech/robots-clothed-human-flesh-could-9955138"], ["imageurl", "http://i3.mirror.co.uk/incoming/article8106088.ece/ALTERNATES/s1200/Synthetic-human.jpg"], ["created_at", 2017-03-03 10:59:59 UTC], ["updated_at", 2017-03-03 10:59:59 UTC], ["user_id", 1], ["source", "MIRROR"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for SavedlinksController#create, rendering head :no_content
+Completed 204 No Content in 237ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:00:02 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"LENuT4gjpNylk/gZLD9D2iRml0frH6Sm8ljGkXuQu1oWIRfow5nnt5xa4LgKmKd7PE71/zPtkYm8pOnk7Gm9gw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.6ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (12.7ms)
+  Rendered layouts/_navigation.html.haml (16.2ms)
+Completed 200 OK in 221ms (Views: 211.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:00:03 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:00:03 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:03:01 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  Rendered savedlinks/index.html.haml within layouts/application (18.3ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (The line was indented 3 levels deeper than the previous line.):
+     9: 				.image= image_tag savedlink.imageurl
+    10: 				%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
+    11: 	- else
+    12: 				%h5 No saved links yet!
+    13: 	%p
+  
+app/views/savedlinks/index.html.haml:12
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.3ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.8ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.7ms)
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (174.7ms)
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:03:15 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  Rendered savedlinks/index.html.haml within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     9: 				.image= image_tag savedlink.imageurl
+    10: 				%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
+    11: 	- else
+    12: 			%h5 No saved links yet!
+    13: 	%p
+  
+app/views/savedlinks/index.html.haml:12
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.7ms)
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:03:33 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.4ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (11.0ms)
+  Rendered layouts/_navigation.html.haml (28.6ms)
+Completed 200 OK in 294ms (Views: 281.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:03:33 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (106.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (24.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 137ms (Views: 0.8ms | ActiveRecord: 130.9ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:03:33 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (2.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:04:54 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.7ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (14.4ms)
+  Rendered layouts/_navigation.html.haml (22.3ms)
+Completed 200 OK in 175ms (Views: 159.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:04:54 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (185.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 192ms (Views: 0.4ms | ActiveRecord: 186.1ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:04:54 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (114.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (13.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 136ms (Views: 0.5ms | ActiveRecord: 128.5ms)
+
+
+Started DELETE "/savedlinks/6" for ::1 at 2017-03-03 11:05:08 +0000
+Processing by SavedlinksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"i8D64Mu66kdy8EsI+243kyET/dzR1D8B3xuf441MyB2xooNHgACpLEs5U6ndydMyOTufZAkmCi6R57CWGrXOxA==", "id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSavedLink Load (0.2ms)[0m  [1m[34mSELECT  "saved_links".* FROM "saved_links" WHERE "saved_links"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "saved_links" WHERE "saved_links"."id" = $1[0m  [["id", 6]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/savedlinks
+Completed 302 Found in 14ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:05:08 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.2ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (5.2ms)
+  Rendered layouts/_navigation.html.haml (12.9ms)
+Completed 200 OK in 119ms (Views: 111.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:05:08 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (133.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (5.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 144ms (Views: 0.4ms | ActiveRecord: 139.6ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:05:08 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 11:06:41 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"authenticity_token"=>"ny3jlrwVCZluIgjDwvOE5wf53SbqD3XnjU7unO6BWq2lT5ox969K8lfrEGLkVGBGH9G/njL9QMjDssHpeXhcdA=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.haml (20.4ms)
+Completed 200 OK in 171ms (Views: 161.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:06:42 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (43.0ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 64ms (Views: 0.3ms | ActiveRecord: 56.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:06:42 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/savedlinks" for ::1 at 2017-03-03 11:06:45 +0000
+Processing by SavedlinksController#create as HTML
+  Parameters: {"Title"=>"Mike Pence Used Personal Email As Governor And Was Hacked", "Url"=>"http://www.huffingtonpost.com/entry/mike-pence-email-hacked_us_58b8bc9ae4b0d2821b4ceac1?pl6hcqxb82jfw29&ncid=inblnkushpmg00000009", "Description"=>"Some emails contained information deemed too sensitive to release to the public.", "Source"=>"THE HUFFINGTON POST", "Image"=>"http://img.huffingtonpost.com/asset/2000_1000/58b8bd581900003600bd67d2.jpeg?cache=jwirwt7thx"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "saved_links" ("title", "subtitle", "url", "imageurl", "created_at", "updated_at", "user_id", "source") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Mike Pence Used Personal Email As Governor And Was Hacked"], ["subtitle", "Some emails contained information deemed too sensitive to release to the public."], ["url", "http://www.huffingtonpost.com/entry/mike-pence-email-hacked_us_58b8bc9ae4b0d2821b4ceac1?pl6hcqxb82jfw29&ncid=inblnkushpmg00000009"], ["imageurl", "http://img.huffingtonpost.com/asset/2000_1000/58b8bd581900003600bd67d2.jpeg?cache=jwirwt7thx"], ["created_at", 2017-03-03 11:06:45 UTC], ["updated_at", 2017-03-03 11:06:45 UTC], ["user_id", 1], ["source", "THE HUFFINGTON POST"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+No template found for SavedlinksController#create, rendering head :no_content
+Completed 204 No Content in 241ms (ActiveRecord: 13.3ms)
+
+
+Started POST "/savedlinks" for ::1 at 2017-03-03 11:06:46 +0000
+Processing by SavedlinksController#create as HTML
+  Parameters: {"Title"=>"Gang with Satanic shrine accused of killing girl to appease ", "Url"=>"http://www.mirror.co.uk/news/world-news/notorious-gang-members-who-satanic-9954383", "Description"=>"MS-13 gang members ", "Source"=>"MIRROR", "Image"=>"http://i4.mirror.co.uk/incoming/article9954562.ece/ALTERNATES/s1200/Law-Enforcement-Around-The-US-Fight-The-Street-Gang-MS-13.jpg"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "saved_links" ("title", "subtitle", "url", "imageurl", "created_at", "updated_at", "user_id", "source") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Gang with Satanic shrine accused of killing girl to appease "], ["subtitle", "MS-13 gang members "], ["url", "http://www.mirror.co.uk/news/world-news/notorious-gang-members-who-satanic-9954383"], ["imageurl", "http://i4.mirror.co.uk/incoming/article9954562.ece/ALTERNATES/s1200/Law-Enforcement-Around-The-US-Fight-The-Street-Gang-MS-13.jpg"], ["created_at", 2017-03-03 11:06:46 UTC], ["updated_at", 2017-03-03 11:06:46 UTC], ["user_id", 1], ["source", "MIRROR"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for SavedlinksController#create, rendering head :no_content
+Completed 204 No Content in 267ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:06:55 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"2MlrkDWLdZ05pvJBJAizkYW2JK4iVZqkv62QU5o0E87iqxI3fjE29gBv6uACr1cwnZ5GFvqnr4vxUb8mDc0VFw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  Rendered savedlinks/index.html.haml within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    4: 		- @savedlinks.all.each do |savedlink|
+    5: 			%ul
+    6: 				%li
+    7: 						%h5= link_to savedlink.title, savedlink.url
+    8: 						%h5= savedlink.subtitle
+    9: 						.image= image_tag savedlink.imageurl
+   10: 						%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
+  
+app/views/savedlinks/index.html.haml:7
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.2ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (151.0ms)
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:07:10 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"2MlrkDWLdZ05pvJBJAizkYW2JK4iVZqkv62QU5o0E87iqxI3fjE29gBv6uACr1cwnZ5GFvqnr4vxUb8mDc0VFw=="}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.4ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (7.4ms)
+  Rendered layouts/_navigation.html.haml (20.5ms)
+Completed 200 OK in 154ms (Views: 139.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:07:11 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (159.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 167ms (Views: 0.4ms | ActiveRecord: 160.8ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:07:11 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:08:23 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  Rendered savedlinks/index.html.haml within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: "\t\t\t " used for indentation, but the rest of the document was indented using 1 tab.):
+    4: 	- @savedlinks.all.each do |savedlink|
+    5: 		%h5= link_to savedlink.title, savedlink.url
+    6: 		%h5= savedlink.subtitle
+    7: 			 = image_tag savedlink.imageurl
+    8: 		%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
+    9: - else
+   10: 	%h5 No saved links yet!
+  
+app/views/savedlinks/index.html.haml:7
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.8ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (114.7ms)
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:08:37 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  Rendered savedlinks/index.html.haml within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: "\t\t\t " used for indentation, but the rest of the document was indented using 1 tab.):
+    4: 	- @savedlinks.all.each do |savedlink|
+    5: 		%h5= link_to savedlink.title, savedlink.url
+    6: 		%h5= savedlink.subtitle
+    7: 			 = image_tag savedlink.imageurl
+    8: 		%h6= link_to 'Delete', savedlink_path(savedlink), method: :delete
+    9: - else
+   10: 	%h5 No saved links yet!
+  
+app/views/savedlinks/index.html.haml:7
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.6ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.1ms)
+  Rendering /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/macbookpro/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (117.1ms)
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:09:07 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (2.6ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (31.8ms)
+  Rendered layouts/_navigation.html.haml (13.6ms)
+Completed 200 OK in 318ms (Views: 290.0ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:09:08 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (9.9ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:09:08 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (41.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 47ms (Views: 0.3ms | ActiveRecord: 42.5ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:11:22 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (14.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.4ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (36.5ms)
+  Rendered layouts/_navigation.html.haml (18.2ms)
+Completed 200 OK in 289ms (Views: 255.8ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:11:23 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (3.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 12ms (Views: 1.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:11:23 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (25.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (43.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 79ms (Views: 0.3ms | ActiveRecord: 69.4ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 11:11:27 +0000
+Processing by StoriesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.haml (20.2ms)
+Completed 200 OK in 281ms (Views: 271.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:11:29 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"DSJAqV+DjkldWcW8vVRClw7ciAk5x9c07oWgHjkAG5E3QDkOFDnNImSQ3R2b86Y2FvTqseE14hugeY9rrvkdSA=="}
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (1.6ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (13.4ms)
+  Rendered layouts/_navigation.html.haml (14.9ms)
+Completed 200 OK in 211ms (Views: 193.3ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:11:30 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (24.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 37ms (Views: 0.3ms | ActiveRecord: 32.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:11:30 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (92.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 98ms (Views: 0.4ms | ActiveRecord: 93.6ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:11:57 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (1.5ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (12.2ms)
+  Rendered layouts/_navigation.html.haml (17.5ms)
+Completed 200 OK in 184ms (Views: 170.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:11:58 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (31.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (115.1ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 152ms (Views: 0.3ms | ActiveRecord: 146.9ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:11:58 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 11:12:11 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"authenticity_token"=>"mF6rHr43pem+gSoMKsW+L9/h9OLsev32KOvUO1SFMmmiPNK59Y3mgodIMq0MYlqOx8mWWjSIyNlmF/tOw3w0sA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.haml (8.3ms)
+Completed 200 OK in 121ms (Views: 114.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:12:11 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (21.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:12:11 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (4.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:12:44 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"lknh5smTuY+m4OiY1avRzuMuHU/Rjkxmp3V80jLNBbysK5hBgin65J8p8DnzDDVv+wZ/9wl8eUnpiVOnpTQDZQ=="}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.4ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (14.9ms)
+  Rendered layouts/_navigation.html.haml (22.6ms)
+Completed 200 OK in 207ms (Views: 182.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:12:44 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:12:44 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (3.8ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 11:13:29 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"authenticity_token"=>"r+9CCr8f0ysQ7D1hIy8CVtfNVYZsLy7Gt9TmOIyBeyWVjTut9KWQQCklJcAFiOb3z+U3PrTdG+n5KMlNG3h9/A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.haml (15.9ms)
+Completed 200 OK in 176ms (Views: 171.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:13:29 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (4.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:13:29 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (1.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:13:34 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"Bn7z8RT1R60I5GTvTF/J6MtaGX6LF1sg+KfQulxYMec8HIpWX08ExjEtfE5q+C1J03J7xlPlbg+2W//Py6E3Pg=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.4ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (5.1ms)
+  Rendered layouts/_navigation.html.haml (17.0ms)
+Completed 200 OK in 149ms (Views: 141.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:13:34 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.6ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:13:34 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:13:49 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.4ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.haml (12.7ms)
+Completed 200 OK in 134ms (Views: 125.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:13:49 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (37.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 42ms (Views: 0.4ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:13:49 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:14:03 +0000
+Processing by SavedlinksController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.3ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.haml (17.1ms)
+Completed 200 OK in 146ms (Views: 136.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:14:03 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (54.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (9.3ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 72ms (Views: 3.2ms | ActiveRecord: 64.2ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:14:04 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (4.4ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/stories" for ::1 at 2017-03-03 11:14:06 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"authenticity_token"=>"KLHXFr5SfwwXrTkn6zChuS5+381cfN/k6mS4ca8WNlYS066x9eg8Zy5kIYbNl0UYNla9dYSO6sukmJcEOO8wjw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stories/index.html.haml within layouts/application
+  Rendered stories/index.html.haml within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.haml (12.7ms)
+Completed 200 OK in 84ms (Views: 79.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:14:07 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (2.2ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:14:07 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/savedlinks" for ::1 at 2017-03-03 11:14:09 +0000
+Processing by SavedlinksController#index as HTML
+  Parameters: {"authenticity_token"=>"mulz1oMTx6z2wjtlBya60WHWPDpcVur9NKx9fq3Slm+giwpxyKmEx88LI8QhgV5wef5egoSk39J6UFILOiuQtg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering savedlinks/index.html.haml within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSavedLink Load (0.3ms)[0m  [1m[34mSELECT "saved_links".* FROM "saved_links" WHERE "saved_links"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered savedlinks/index.html.haml within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.haml (15.4ms)
+Completed 200 OK in 126ms (Views: 120.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:14:09 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (68.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (17.7ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 119ms (Views: 0.3ms | ActiveRecord: 86.1ms)
+
+
+Started GET "/papers" for ::1 at 2017-03-03 11:14:09 +0000
+Processing by PapersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPaper Load (0.5ms)[0m  [1m[34mSELECT "papers".* FROM "papers" WHERE "papers"."position" = $1[0m  [["position", "left"]]
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+

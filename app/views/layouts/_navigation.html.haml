@@ -40,7 +40,7 @@
               %li.active{:role => "presentation"}
                 =link_to "Sign out", destroy_user_session_path, method: :get
               %li.active{:role => "presentation"}
-                =link_to "Setting", edit_user_registration_path
+                =link_to "Setting", edit_user_registration_path 
             - else
               %li.active{:role => "presentation"}
                 =link_to new_user_session_path class: "sign-in" do

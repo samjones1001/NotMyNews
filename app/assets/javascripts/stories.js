@@ -9,7 +9,7 @@ $(document).ready(function(){
       $('#storylist').append("<ul><li>" + "<a href='" + data.articles[articleNo].url + "'>"
          + data.articles[articleNo].title + "</a>" + "<br>" + data.articles[articleNo].description
          + "<br>" + paperName + "<br><img src='" + data.articles[articleNo].urlToImage
-         + "' height='150'><br></li></ul><br>" +
+         + "' height='150'>" +
          "<iframe width='0' height='0' border='0' name='dummyframe' id='dummyframe' style='display:none;''></iframe>"
          + "<form action='/savedlinks' method='post' target='dummyframe'>"
          + "<input class='input' type='text' style='display:none;' name='Title' value='"  + data.articles[articleNo].title + "'>"
@@ -18,7 +18,8 @@ $(document).ready(function(){
          + "<input class='input' type='text'  style='display:none;' name='Source' value='" + paperName + "'>"
          + "<input class='input' type='text' style='display:none;' name='Image' value='" + data.articles[articleNo].urlToImage + "'>"
          + "<input type='submit' value='Save'>" +
-           "</form>"
+           "</form>" +
+           "<br></li></ul><br>"
       );
     });
   }
